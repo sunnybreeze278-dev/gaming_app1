@@ -12,15 +12,17 @@ function Store() {
       originalPrice: 39.99,
       rating: 4.5,
       trending: true,
+      discount: "37% OFF",
       img: "https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 2,
       name: "Racing Fury",
-      price: 30,
-      originalPrice: 49.99,
+      price: null,
+      originalPrice: null,
       rating: 4.2,
       trending: true,
+      discount: "FREE TO PLAY",
       img: "https://wallpapercave.com/wp/wp9429418.jpg",
     },
     {
@@ -30,15 +32,17 @@ function Store() {
       originalPrice: 35.99,
       rating: 3.8,
       trending: false,
+      discount: "39% OFF",
       img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 4,
       name: "Mystic Quest",
-      price: 35,
-      originalPrice: 59.99,
+      price: null,
+      originalPrice: null,
       rating: 4.7,
       trending: true,
+      discount: "FREE TO PLAY",
       img: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -48,6 +52,7 @@ function Store() {
       originalPrice: 44.99,
       rating: 4.3,
       trending: false,
+      discount: "38% OFF",
       img: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -57,6 +62,7 @@ function Store() {
       originalPrice: 29.99,
       rating: 4.1,
       trending: true,
+      discount: "15% OFF",
       img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -66,6 +72,7 @@ function Store() {
       originalPrice: 54.99,
       rating: 4.4,
       trending: false,
+      discount: "42% OFF",
       img: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -75,6 +82,7 @@ function Store() {
       originalPrice: 69.99,
       rating: 4.8,
       trending: true,
+      discount: "43% OFF",
       img: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -84,6 +92,7 @@ function Store() {
       originalPrice: 42.99,
       rating: 4.6,
       trending: true,
+      discount: "37% OFF",
       img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
     },
   ];
@@ -121,10 +130,15 @@ function Store() {
             </div>
             <h3>{game.name}</h3>
             {renderStars(game.rating)}
-            <div className="price-section">
-              <span className="original-price">${game.originalPrice.toFixed(2)}</span>
-              <span className="current-price">${game.price.toFixed(2)}</span>
-            </div>
+            {game.price !== null ? (
+              <div className="price-section">
+                <span className="original-price">${game.originalPrice.toFixed(2)}</span>
+                <span className="current-price">${game.price.toFixed(2)}</span>
+              </div>
+            ) : (
+              <div className="free-badge">{game.discount}</div>
+            )}
+            {game.discount && game.price !== null && <div className="discount-label">{game.discount}</div>}
             <button onClick={() => addToCart(game)} className="buy-btn">
               Add to Cart
             </button>

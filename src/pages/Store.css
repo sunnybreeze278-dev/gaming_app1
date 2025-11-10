@@ -91,7 +91,7 @@ h3 {
 }
 
 .original-price {
-  color: #888;
+  color: #ff4444;
   text-decoration: line-through;
   font-size: 0.9rem;
 }
@@ -100,6 +100,21 @@ h3 {
   color: #00ffff;
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+.free-badge {
+  color: #00ff00;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 8px 0;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.discount-label {
+  color: #ff6b00;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 5px 0;
 }
 
 .buy-btn {
