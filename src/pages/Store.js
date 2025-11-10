@@ -4,7 +4,6 @@ import "./Store.css";
 function Store() {
   const [cart, setCart] = useState([]);
 
-  // ✅ Updated image links (all load successfully)
   const games = [
     {
       id: 1,
@@ -29,6 +28,36 @@ function Store() {
       name: "Mystic Quest",
       price: 35,
       img: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 5,
+      name: "Shadow Assassin",
+      price: 28,
+      img: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 6,
+      name: "Battle Royale",
+      price: 20,
+      img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 7,
+      name: "Zombie Outbreak",
+      price: 32,
+      img: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 8,
+      name: "Dragon's Lair",
+      price: 40,
+      img: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 9,
+      name: "Neon Drift",
+      price: 27,
+      img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
