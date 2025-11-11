@@ -21,16 +21,20 @@ function App() {
           <div className="logo">
             <h2><span className="highlight">Gaming</span> App</h2>
           </div>
+          <ul className="nav-user">
+            <li><Link to="/profile">Profile</Link></li>
+            <li><Link to="/signin">Sign In</Link></li>
+            <li><Link to="/cart">Cart</Link></li>
+          </ul>
+        </nav>
+        <nav className="navbar-bottom">
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/store">Store</Link></li>
             <li><Link to="/library">Library</Link></li>
             <li><Link to="/wallet">Wallet</Link></li>
-            <li><Link to="/profile">Profile</Link></li>
-            <li><Link to="/trade">Trade</Link></li>
             <li><Link to="/share">Share</Link></li>
-            <li><Link to="/cart">Cart</Link></li>
-            <li><Link to="/signin">Sign In</Link></li>
+            <li><Link to="/trade">Trade</Link></li>
           </ul>
         </nav>
 
