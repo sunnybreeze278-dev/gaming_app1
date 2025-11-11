@@ -18,9 +18,11 @@ function App() {
     <Router>
       <div className="app-container">
         <nav className="navbar">
-          <div className="logo">
-            <h2><span className="highlight">Gaming</span> App</h2>
-          </div>
+          <Link to="/" className="logo-link">
+            <div className="logo">
+              <h2><span className="highlight">Gaming</span> App</h2>
+            </div>
+          </Link>
           <ul className="nav-user">
             <li><Link to="/profile">Profile</Link></li>
             <li><Link to="/signin">Sign In</Link></li>
