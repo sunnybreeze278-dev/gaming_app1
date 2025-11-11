@@ -8,11 +8,10 @@ function Store() {
     {
       id: 1,
       name: "Cyber Strike",
-      price: 25,
-      originalPrice: 39.99,
+      price: 89,
+      originalPrice: 129.99,
       rating: 4.5,
       trending: true,
-      discount: "37% OFF",
       img: "https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -28,11 +27,10 @@ function Store() {
     {
       id: 3,
       name: "Galaxy Raider",
-      price: 22,
-      originalPrice: 35.99,
+      price: 89,
+      originalPrice: 119.99,
       rating: 3.8,
       trending: false,
-      discount: "39% OFF",
       img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -48,51 +46,46 @@ function Store() {
     {
       id: 5,
       name: "Shadow Assassin",
-      price: 28,
-      originalPrice: 44.99,
+      price: 89,
+      originalPrice: 149.99,
       rating: 4.3,
       trending: false,
-      discount: "38% OFF",
       img: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 6,
       name: "Battle Royale",
-      price: 20,
-      originalPrice: 29.99,
+      price: 89,
+      originalPrice: 109.99,
       rating: 4.1,
       trending: true,
-      discount: "15% OFF",
       img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 7,
       name: "Zombie Outbreak",
-      price: 32,
-      originalPrice: 54.99,
+      price: 89,
+      originalPrice: 139.99,
       rating: 4.4,
       trending: false,
-      discount: "42% OFF",
       img: "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 8,
       name: "Dragon's Lair",
-      price: 40,
-      originalPrice: 69.99,
+      price: 89,
+      originalPrice: 159.99,
       rating: 4.8,
       trending: true,
-      discount: "43% OFF",
       img: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 9,
       name: "Neon Drift",
-      price: 27,
-      originalPrice: 42.99,
+      price: 89,
+      originalPrice: 129.99,
       rating: 4.6,
       trending: true,
-      discount: "37% OFF",
       img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
     },
   ];
@@ -138,7 +131,6 @@ function Store() {
             ) : (
               <div className="free-badge">{game.discount}</div>
             )}
-            {game.discount && game.price !== null && <div className="discount-label">{game.discount}</div>}
             <button onClick={() => addToCart(game)} className="buy-btn">
               Add to Cart
             </button>
